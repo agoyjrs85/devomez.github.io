@@ -1,0 +1,5 @@
+ver on filezilla
+
+1.all from v3
+2. removed site desciption from posts layout
+3. removed noodp robots
