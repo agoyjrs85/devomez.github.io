@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//images1-focus-opensocial.googleusercontent.com" />
+    <link rel="dns-prefetch" href="//static.addtoany.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msvalidate.01" content="">
+    <meta name="yandex-verification" content="">
+    <meta name="google-site-verification" content="U8P9vWmxhlkYi9hrkd-PqbXzDMY8ijgp386LNJOgJAg">
+    <meta charset="utf-8" />
+    <title>Eloquent vs Query Builder vs SQL: Performance Test</title>
+    <meta name="description" content="One video from my 4-hour course &amp;quot;Eloquent: Expert Level&amp;quot;. Purchase full course here: http://bit.ly/eloquent-course">
+	<meta name="keywords" content="laravel,php">
+    <meta property="og:site_name" content="Devomez">
+    <meta property="og:url" content="https://devomez.github.io/videos/watch/eloquent-vs-query-builder-vs-sql-performance-test">
+    <meta property="og:title" content="Eloquent vs Query Builder vs SQL: Performance Test">
+    <meta property="og:image" content="https://i.ytimg.com/vi/3TJfR1Ta4GU/hqdefault.jpg">
+    <meta property="og:description" content="">
+    <meta name='twitter:card' content='summary_large_image' />
+    <script type="application/ld+json">
+        { "@context": "http://schema.org", "@type": "VideoObject", "name": "Eloquent vs Query Builder vs SQL: Performance Test", "description": "One video from my 4-hour course &amp;quot;Eloquent: Expert Level&amp;quot;. &lt;br /&gt;Purchase full course here: &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;http://bit.ly/eloquent-course&quot;&gt;http://bit.ly/eloquent-course&lt;/a&gt;\r\n", "thumbnailUrl": "https://i.ytimg.com/vi/3TJfR1Ta4GU/hqdefault.jpg", "uploadDate": "2018-10-17T06:26:28Z", "duration": "PT5M37S", "contentUrl": "https://devomez.github.io/videos/watch/eloquent-vs-query-builder-vs-sql-performance-test", "interactionCount": "24527" }
+    </script>
+    <link rel="canonical" href="https://devomez.github.io/videos/watch/eloquent-vs-query-builder-vs-sql-performance-test" />
+    <link rel="stylesheet" href="https://devomez.github.io/inc/main.css">
+    <noscript><style>#preloading{display: none}</style></noscript>
+</head>
+<body class="bg-light">
+    <div id="preloading">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar mb-3 navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
+        <div class="container py-2"><a class="navbar-brand" href="/">Devomez</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-urls" aria-controls="navbar-urls" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <form
+                action="/videos/search/" class="my-2 my-lg-0 offset-md-2 col-md-6 col-sm-12 px-0 mr-auto">
+                <div class="input-group"><input name="s" class="form-control rounded-0 py-2" type="text" placeholder="video search..." id="example-search-input"><span class="input-group-append"><button aria-label="search" role="button" class="btn btn-secondary rounded-0" type="submit"><span class="px-2"><svg class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></span></button>
+                    </span>
+                </div>
+                </form>
+                <div class="collapse navbar-collapse flex-md-grow-0" id="navbar-urls">
+
+                </div>
+        </div>
+    </nav>
+    <div class="container min-height-62" >
+        <div class="resp-container" id="top_720"></div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="bg-white"><noscript><a href="https://www.youtube.com/watch?v=3TJfR1Ta4GU"><img alt="Eloquent vs Query Builder vs SQL: Performance Test" src="https://i.ytimg.com/vi/3TJfR1Ta4GU/hqdefault.jpg" /></a></noscript>
+                    <div id="video-player"></div>
+                    <div class="p-3">
+                        <h1 class="h5 video-title bwr">Eloquent vs Query Builder vs SQL: Performance Test</h1>
+                        <div class="py-1 row">
+                            <div class="col-12 col-md-6 my-auto"><b class="text-danger">Share this & earn $10</b></div>
+                            <div class="col-12 col-md-6">
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_reddit"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_whatsapp"></a></div>
+                            </div>
+                        </div>
+                        <div align="center" class="py-1">
+
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-2 bwr"><strong>Laravel Business</strong><br> Published at : 01 Dec 2020  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="h-100 d-flex align-items-center justify-content-center"><a  target="_blank" rel="noopener" class="btn btn-block btn-danger bwr" href="https://www.youtube.com/watch?v=3TJfR1Ta4GU">Subscribe to Laravel Business</a></div>
+                                </div>
+                            </div>
+                            <div class="resp-container" id="in_post_bottomads"></div>
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="text-center bg-light mb-2 p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"></path></svg></span>                                        24527 views </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg></span>                                                412 </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg></span>                                                17 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="py-1 d-md-block bwr" id="video-description">One video from my 4-hour course &quot;Eloquent: Expert Level&quot;. <br />Purchase full course here: <a rel="nofollow" target="blank" href="http://bit.ly/eloquent-course">http://bit.ly/eloquent-course</a>
+</div>
+                        <div class="d-none"><span>laravel</span><span>php</span></div>
+                        <hr/>
+                        <div class="py-3">
+     <div id="disqus_thread"></div>
+                            <script>
+                            var disqus_config = function () {
+                                this.page.url = "https://devomez.github.io/videos/watch/eloquent-vs-query-builder-vs-sql-performance-test";
+                                this.page.vid_identifier = "/videos/watch/eloquent-vs-query-builder-vs-sql-performance-test";
+                            };
+                            
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = 'https://xlx.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                         </div>
+                    </div>
+                </div>
+                <div class="position-sticky fixed-top d-md-block d-none">
+                    <div align="center" class="py-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="mb-4">
+                <div class="resp-container py-3" id="sidebar_300"></div>
+            </div>
+                
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-speak-hungarian-with-barbara-palvin">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/08pt5jzyD9Y/mqdefault.jpg" alt="How To Speak Hungarian with Barbara Palvin">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How To Speak Hungarian with Barbara Palvin</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/narc-ps2-gameplay">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/VcptiElcEZE/mqdefault.jpg" alt="Narc PS2 gameplay">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Narc PS2 gameplay</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/fouls-basketball">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/UJbBUi7SgtM/mqdefault.jpg" alt="Fouls | Basketball">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Fouls | Basketball</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/beauty-and-the-beast-from-beauty-and-the-beast-official-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/axySrE0Kg6k/mqdefault.jpg" alt="Beauty and the Beast (From &quot;Beauty and the Beast&quot;/Official Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Beauty and the Beast (From &quot;Beauty and the Beast&quot;/Official Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/obama-107-yr-old-in-iowa-diner">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/fAdX7Px-5jE/mqdefault.jpg" alt="Obama &amp; 107 Yr Old In Iowa Diner">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Obama &amp; 107 Yr Old In Iowa Diner</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/free-photo-collage-with-your-desired-shapes-with-photoshop">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/_EYjrnsXHMM/mqdefault.jpg" alt="Free Photo Collage with your Desired Shapes with Photoshop">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Free Photo Collage with your Desired Shapes with Photoshop</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/6zcf3pc9gnw">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6ZcF3pC9gNw/mqdefault.jpg" alt="КАК НАПИСАТЬ СВОЙ ПЕРВЫЙ САУНДТРЕК к ФИЛЬМУ">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">КАК НАПИСАТЬ СВОЙ ПЕРВЫЙ САУНДТРЕК к ФИЛЬМУ</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/herbie-hancock-it-ain-t-necessarily-so">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/rcWmwPwIB5g/mqdefault.jpg" alt="Herbie Hancock - It Ain&#39;t Necessarily So">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Herbie Hancock - It Ain&#39;t Necessarily So</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/billy-ocean-there-ll-be-sad-songs-to-make-you-cry-official-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/KLjpJZbxkAU/mqdefault.jpg" alt="Billy Ocean - There&#39;ll Be Sad Songs (To Make You Cry) (Official Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Billy Ocean - There&#39;ll Be Sad Songs (To Make You Cry) (Official Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/lfc-165-corsair-void-wireless-headset-battery-replacement-upgrade">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5MhmUQpcfms/mqdefault.jpg" alt="LFC#165 - Corsair Void Wireless Headset Battery Replacement Upgrade">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">LFC#165 - Corsair Void Wireless Headset Battery Replacement Upgrade</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/system-of-a-down-suggestions-lyrics">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ZF602iA65HQ/mqdefault.jpg" alt="System of a Down - Suggestions Lyrics">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">System of a Down - Suggestions Lyrics</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/jr-thomas-the-volcanos-get-a-hold-of-you">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/onuva3xClcA/mqdefault.jpg" alt="Jr. Thomas &amp; The Volcanos - Get A Hold Of You">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Jr. Thomas &amp; The Volcanos - Get A Hold Of You</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/why-you-should-buy-a-house-at-22">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/fZyHp9LbxAQ/mqdefault.jpg" alt="Why you should buy a house at 22">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Why you should buy a house at 22</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/barbershop-no-2-promotional-video-4k">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/KcBgtq9jyZI/mqdefault.jpg" alt="Barbershop No 2 | Promotional Video | 4K">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Barbershop No 2 | Promotional Video | 4K</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/iuahlapwbbc">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/iuaHLapWBBc/mqdefault.jpg" alt="ИСПОЛЬЗОВАЛ ЧИТЫ?! БИТВА В БЕДРОКОВОЙ КОРОБКЕ! ЖИВЫМ ВЫЙДЕТ ТОЛЬКО ОДИН! МАЙНКРАФТ">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">ИСПОЛЬЗОВАЛ ЧИТЫ?! БИТВА В БЕДРОКОВОЙ КОРОБКЕ! ЖИВЫМ ВЫЙДЕТ ТОЛЬКО ОДИН! МАЙНКРАФТ</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/axwell-ingrosso-more-than-you-know-lyrics">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/8yGKJl_U4Gg/mqdefault.jpg" alt="Axwell Λ Ingrosso - More Than You Know (Lyrics)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Axwell Λ Ingrosso - More Than You Know (Lyrics)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/for-the-time-being">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/R3wyXhN41Vw/mqdefault.jpg" alt="For The Time Being">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">For The Time Being</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/10-more-bad-rocket-league-habits-you-probably-have">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/zjH1t7IoZCY/mqdefault.jpg" alt="10 MORE Bad Rocket League Habits You (Probably) Have!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">10 MORE Bad Rocket League Habits You (Probably) Have!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/website-hacking-in-6-minutes">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/lj1Us6UWK74/mqdefault.jpg" alt="Website Hacking in 6 Minutes">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Website Hacking in 6 Minutes</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/deadlock-virus-jones-official-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/vYPfUQlstxw/mqdefault.jpg" alt="DEADLOCK - Virus Jones (official video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">DEADLOCK - Virus Jones (official video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/067-an-excellent-booke-of-the-arte-of-magicke-with-dr-al-cummins-glitc">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/dlqrVFt3ehs/mqdefault.jpg" alt="#067 - ‘An Excellent Booke of the Arte of Magicke’ with Dr. Al Cummins | Glitch Bottle">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">#067 - ‘An Excellent Booke of the Arte of Magicke’ with Dr. Al Cummins | Glitch Bottle</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/4-computer-spy-hacks-you-can-do-right-now-simple-and-clever">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/AUyvYOr2A1A/mqdefault.jpg" alt="4 Computer Spy Hacks YOU CAN DO RIGHT NOW (Simple and Clever)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">4 Computer Spy Hacks YOU CAN DO RIGHT NOW (Simple and Clever)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/10-black-friday-shopping-secrets-amazon-doesn-t-want-you-to-know">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/9bXgZmLts4U/mqdefault.jpg" alt="10 Black Friday Shopping Secrets Amazon Doesn’t Want You to Know!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">10 Black Friday Shopping Secrets Amazon Doesn’t Want You to Know!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/impressive-knockouts-in-the-voice">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/B29WiSTTTyk/mqdefault.jpg" alt="IMPRESSIVE KNOCKOUTS in The Voice">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">IMPRESSIVE KNOCKOUTS in The Voice</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/bulldogs-frantically-warn-tv-canine-of-danger-in-classic-horror-scene">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/UvjVbXA34pQ/mqdefault.jpg" alt="Bulldogs Frantically Warn TV Canine Of Danger in Classic Horror Scene">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Bulldogs Frantically Warn TV Canine Of Danger in Classic Horror Scene</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/motel-speedbuild-no-cc-the-sims-4">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/p3CayUcX8Fo/mqdefault.jpg" alt="Мотель│Строительство│Motel│SpeedBuild│NO CC [The Sims 4]">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Мотель│Строительство│Motel│SpeedBuild│NO CC [The Sims 4]</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/portrait-of-lotte-0-to-14-years-in-4-min">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/UH1x5aRtjSQ/mqdefault.jpg" alt="Portrait of Lotte, 0 to 14 years in 4 min.">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Portrait of Lotte, 0 to 14 years in 4 min.</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/warmth-parallel">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/9zpJKjwkIQc/mqdefault.jpg" alt="Warmth - Parallel">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Warmth - Parallel</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/warframe-concentrated-arrow-ivara">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/anAosjbcRHw/mqdefault.jpg" alt="Warframe: CONCENTRATED ARROW IVARA">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Warframe: CONCENTRATED ARROW IVARA</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/edward-de-valle-knowledgeable-about-several-languages">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/x5fiEvzuak0/mqdefault.jpg" alt="Edward de Valle: Knowledgeable about several languages">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Edward de Valle: Knowledgeable about several languages</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/sadhguru-feeling-bored-with-life-how-to-never-be-bored-again">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/3DMj7Zj-L1s/mqdefault.jpg" alt="Sadhguru - Feeling Bored With Life?  How to NEVER Be Bored Again?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Sadhguru - Feeling Bored With Life?  How to NEVER Be Bored Again?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/every-reference-in-finding-nemo">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/949D9pRbmjw/mqdefault.jpg" alt="Every Reference in Finding Nemo">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Every Reference in Finding Nemo</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/baby-monkey-s-never-ending-tantrums-part-2">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/xHa-T2TXzHE/mqdefault.jpg" alt="Baby monkey&#39;s never ending tantrums. Part 2">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Baby monkey&#39;s never ending tantrums. Part 2</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/coolsculpting-a-solution-for-small-stubborn-areas-of-fat-the-cosmetic">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/njt1sCMXl3A/mqdefault.jpg" alt="CoolSculpting: A solution for small stubborn areas of fat | The Cosmetic Skin Clinic">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">CoolSculpting: A solution for small stubborn areas of fat | The Cosmetic Skin Clinic</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/i-dont-know-how-but-they-found-me-need-you-here">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/BybwPRtaFUw/mqdefault.jpg" alt="I DONT KNOW HOW BUT THEY FOUND ME - Need You Here">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">I DONT KNOW HOW BUT THEY FOUND ME - Need You Here</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-failings-of-the-church">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/FDmQ9KCz_-s/mqdefault.jpg" alt="The Failings of the Church">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Failings of the Church</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/poser-definition-of-poser">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/1tE1-LukpxI/mqdefault.jpg" alt="Poser | Definition of poser">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Poser | Definition of poser</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/nomy-i-have-a-problem-lyrics">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/R6bWRWBbuyQ/mqdefault.jpg" alt="Nomy - I have a problem / Lyrics">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Nomy - I have a problem / Lyrics</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/amazing-chi-master-throwing-energy-ball-airbending">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/YhqbO0_vYyE/mqdefault.jpg" alt="AMAZING!  Chi Master Throwing Energy Ball / Airbending">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">AMAZING!  Chi Master Throwing Energy Ball / Airbending</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/top-6-smart-diy-inventions">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/B9htFxREhNI/mqdefault.jpg" alt="TOP 6 SMART DIY INVENTIONS">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">TOP 6 SMART DIY INVENTIONS</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/inspecting-the-provisions-food-consumable">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/HC9MqygQua4/mqdefault.jpg" alt="Inspecting the Provisions, Food Consumable">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Inspecting the Provisions, Food Consumable</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/jessie-j-price-tag-itzy-ver-you-heeyeol-s-sketchbook-20200313">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/zahgAha5D9Q/mqdefault.jpg" alt="※꿀보이스 주의※ Jessie J - Price Tag (ITZY 리아ver.)♬ [유희열의 스케치북/You Heeyeol&#39;s Sketchbook] 20200313">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">※꿀보이스 주의※ Jessie J - Price Tag (ITZY 리아ver.)♬ [유희열의 스케치북/You Heeyeol&#39;s Sketchbook] 20200313</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/48-hours-of-pure-black-screen-in-hd">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/1SLr62VBBjw/mqdefault.jpg" alt="48 hours of pure black screen in HD!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">48 hours of pure black screen in HD!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/solo-last-island-of-survival-lios-ldrs-rustmobile">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/3DI5Y2UTB8g/mqdefault.jpg" alt="На что способен, SOLO игрок?! | Last island of survival | #LIOS #LDRS #RUSTmobile |">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">На что способен, SOLO игрок?! | Last island of survival | #LIOS #LDRS #RUSTmobile |</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/talking-about-your-family-in-english-spoken-english-lesson">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/vXI2lRCnTKw/mqdefault.jpg" alt="Talking About Your Family in English - Spoken English Lesson">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Talking About Your Family in English - Spoken English Lesson</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/amazing-creative-construction-tools-and-ingenious-construction-worker">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/-FKfFuK2uZg/mqdefault.jpg" alt="Amazing Creative Construction Tools and Ingenious Construction Worker At New Levels ▶2">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Amazing Creative Construction Tools and Ingenious Construction Worker At New Levels ▶2</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/muse-the-small-print">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/TiTCGPvtbQ0/mqdefault.jpg" alt="Muse The Small Print">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Muse The Small Print</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/hippie-sabotage-different">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/CGNnZvKfhvE/mqdefault.jpg" alt="Hippie Sabotage - DIFFERENT">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Hippie Sabotage - DIFFERENT</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/drama-assume-the-worst">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/lcI4B2kFnZM/mqdefault.jpg" alt="DRAMA - Assume The Worst">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">DRAMA - Assume The Worst</h2>
+    </div>
+
+
+            </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        function load_vid() { var player = document.getElementById('video-player'); player.innerHTML = labnolThumb(); player.onclick = labnolIframe; } function labnolThumb() { return '<div class="d-flex align-items-center justify-content-center"><div class="image-16by9"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/3TJfR1Ta4GU/hqdefault.jpg"></div><div class="v-play-btn"></div></div>'; } function labnolIframe() { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube-nocookie.com/embed/3TJfR1Ta4GU?rel=0&amp;showinfo=0"); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("allowfullscreen", "1"); var div = document.createElement("div"); div.setAttribute("class", "embed-responsive embed-responsive-16by9"); div.innerHTML = iframe.outerHTML; this.parentNode.replaceChild(div, this); } load_vid()
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <footer class="mt-auto bg-white pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">Devomez Network</h5>
+                    <p>Entertainment content from all over the web.</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="">DMCA</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3"> © Copyright : <a target="_blank" rel="noopener" href="https://www.youtube.com"> youtube.com</a></div>
+    </footer>
+    <script>
+        var cb = function() { var link = document.createElement('link'); link.rel = 'stylesheet'; link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css'; var h = document.getElementsByTagName('head')[0]; h.appendChild(link); if (link.addEventListener) { link.addEventListener('load', function() { document.getElementById('preloading').style.display = "none"; }, false); } }; var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame; if (raf) raf(cb); else window.addEventListener('load', cb);
+    </script>
+    <script async="" src="https://devomez.github.io/js/app.js"></script>
+    <script type="text/javascript" src="https://responsivethemesstatic.github.io/static/wp.js"></script>
+    <script type="text/javascript">
+        if(!Histats_variables){var Histats_variables=[];}
+        Histats_variables.push("tags","https://devomez.github.io");
+        var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4360507,4,0,0,0,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+</body>
+</html>
