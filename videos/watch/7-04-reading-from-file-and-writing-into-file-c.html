@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//images1-focus-opensocial.googleusercontent.com" />
+    <link rel="dns-prefetch" href="//static.addtoany.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msvalidate.01" content="">
+    <meta name="yandex-verification" content="">
+    <meta name="google-site-verification" content="U8P9vWmxhlkYi9hrkd-PqbXzDMY8ijgp386LNJOgJAg">
+    <meta charset="utf-8" />
+    <title>7.04 Reading from file and Writing into file, C++</title>
+    <meta name="description" content="Understanding filestream classes for file operations. Creating and opening file to read content from file and write content to ...">
+	<meta name="keywords" content="file handling in C++,open,read">
+    <meta property="og:site_name" content="Devomez">
+    <meta property="og:url" content="https://devomez.github.io/videos/watch/7-04-reading-from-file-and-writing-into-file-c">
+    <meta property="og:title" content="7.04 Reading from file and Writing into file, C++">
+    <meta property="og:image" content="https://i.ytimg.com/vi/zXrLjAFzA-s/hqdefault.jpg">
+    <meta property="og:description" content="">
+    <meta name='twitter:card' content='summary_large_image' />
+    <script type="application/ld+json">
+        { "@context": "http://schema.org", "@type": "VideoObject", "name": "7.04 Reading from file and Writing into file, C++", "description": "Understanding filestream classes for file operations. Creating and opening file to read content from file and write content to the file. C++ program for file handling of text file or binary file with various file opening modes.&lt;br /&gt;&lt;br /&gt;fstreambase: Provides operations common to the file streams. Contains open() and close() functions.&lt;br /&gt;Ifstream: Provides input operations. Contains open() with default input mode. Inherits get(), getline(), read(), seekg() and tellg() functions from istream.&lt;br /&gt;ofstream: Provides output operations. Contains open() with default output mode. Inherits put(), seekp(), tellp() and write() functions from ostream.&lt;br /&gt;fstream: Provides support for simultaneous input and output operations. Inherits all the functions from istream and ostream from iostream.&lt;br /&gt;filebuf: Its purpose is to set the file buffers to read and write.&lt;br /&gt;ios :: in: Open file for reading only. ios :: out: Open file for writing only.&lt;br /&gt;ios :: app: Append to end-of-file. ios :: ate: Go to end-of-file on opening.&lt;br /&gt;ios :: binary: Binary file. ios :: trunc: Delete content of file if exists.&lt;br /&gt;ios :: nocreate: Open fails if the file does not exist. ios :: noreplace: Open fails if the file already exists.&lt;br /&gt;Each file has two associated pointers known as the file pointers.&lt;br /&gt;One of them is called input pointer (or get pointer) and the other is called output pointer (or put pointer).&lt;br /&gt;Input pointer is used for reading the content of a given file location.&lt;br /&gt;Output pointer is used for writing to a given file location.&lt;br /&gt;&lt;br /&gt;GTU - Computer Engineering (CE) - Semester 4 - 2140703 - Object Oriented Programming with C++ - Concepts of C++ - Introduction to Object Oriented Programming&lt;br /&gt;&lt;br /&gt;Object-Oriented Programming with C++ PPTs are available here: &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;http://www.darshan.ac.in/DIET/CE/GTU-Computer-Engineering-Study-Material&quot;&gt;http://www.darshan.ac.in/DIET/CE/GTU-Computer-Engineering-Study-Material&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;This video is recorded by Prof. Rupesh Vaishnav (rupesh.vaishnav@darshan.ac.in, +91-9428037452) at Computer Engineering Department of Darshan Institute of Engineering &amp;amp; Technology, Rajkot as per GTU Syllabus. &lt;br /&gt;&lt;br /&gt;Darshan Institute of Engineering &amp;amp; Technology, Rajkot is a leading institute offering undergraduate, graduate and postgraduate programs in engineering. The Institute is affiliated to the Gujarat Technological University (GTU) and approved by the AICTE, New Delhi. &lt;br /&gt;&lt;br /&gt;Visit us: &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;http://www.darshan.ac.in&quot;&gt;http://www.darshan.ac.in&lt;/a&gt;&lt;br /&gt;Write us: info@darshan.ac.in&lt;br /&gt;Facebook: &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://www.facebook.com/DarshanInstitute.Official&quot;&gt;https://www.facebook.com/DarshanInstitute.Official&lt;/a&gt;&lt;br /&gt;Twitter: &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://www.twitter.com/darshan_inst&quot;&gt;https://www.twitter.com/darshan_inst&lt;/a&gt;&lt;br /&gt;Instagram: &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://www.instagram.com/darshan_inst/&quot;&gt;https://www.instagram.com/darshan_inst/&lt;/a&gt;\r\n", "thumbnailUrl": "https://i.ytimg.com/vi/zXrLjAFzA-s/hqdefault.jpg", "uploadDate": "2018-05-07T02:44:59Z", "duration": "PT10M20S", "contentUrl": "https://devomez.github.io/videos/watch/7-04-reading-from-file-and-writing-into-file-c", "interactionCount": "6338" }
+    </script>
+    <link rel="canonical" href="https://devomez.github.io/videos/watch/7-04-reading-from-file-and-writing-into-file-c" />
+    <link rel="stylesheet" href="https://devomez.github.io/inc/main.css">
+    <noscript><style>#preloading{display: none}</style></noscript>
+</head>
+<body class="bg-light">
+    <div id="preloading">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar mb-3 navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
+        <div class="container py-2"><a class="navbar-brand" href="/">Devomez</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-urls" aria-controls="navbar-urls" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <form
+                action="/videos/search/" class="my-2 my-lg-0 offset-md-2 col-md-6 col-sm-12 px-0 mr-auto">
+                <div class="input-group"><input name="s" class="form-control rounded-0 py-2" type="text" placeholder="video search..." id="example-search-input"><span class="input-group-append"><button aria-label="search" role="button" class="btn btn-secondary rounded-0" type="submit"><span class="px-2"><svg class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></span></button>
+                    </span>
+                </div>
+                </form>
+                <div class="collapse navbar-collapse flex-md-grow-0" id="navbar-urls">
+
+                </div>
+        </div>
+    </nav>
+    <div class="container min-height-62" >
+        <div class="resp-container" id="top_720"></div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="bg-white"><noscript><a href="https://www.youtube.com/watch?v=zXrLjAFzA-s"><img alt="7.04 Reading from file and Writing into file, C++" src="https://i.ytimg.com/vi/zXrLjAFzA-s/hqdefault.jpg" /></a></noscript>
+                    <div id="video-player"></div>
+                    <div class="p-3">
+                        <h1 class="h5 video-title bwr">7.04 Reading from file and Writing into file, C++</h1>
+                        <div class="py-1 row">
+                            <div class="col-12 col-md-6 my-auto"><b class="text-danger">Share this & earn $10</b></div>
+                            <div class="col-12 col-md-6">
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_reddit"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_whatsapp"></a></div>
+                            </div>
+                        </div>
+                        <div align="center" class="py-1">
+
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-2 bwr"><strong>Darshan Institute of Engineering &amp; Technology</strong><br> Published at : 28 Jan 2021  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="h-100 d-flex align-items-center justify-content-center"><a  target="_blank" rel="noopener" class="btn btn-block btn-danger bwr" href="https://www.youtube.com/watch?v=zXrLjAFzA-s">Subscribe to Darshan Institute of Engineering &amp; Technology</a></div>
+                                </div>
+                            </div>
+                            <div class="resp-container" id="in_post_bottomads"></div>
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="text-center bg-light mb-2 p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"></path></svg></span>                                        6338 views </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg></span>                                                45 </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg></span>                                                3 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="py-1 d-md-block bwr" id="video-description">Understanding filestream classes for file operations. Creating and opening file to read content from file and write content to the file. C++ program for file handling of text file or binary file with various file opening modes.<br /><br />fstreambase: Provides operations common to the file streams. Contains open() and close() functions.<br />Ifstream: Provides input operations. Contains open() with default input mode. Inherits get(), getline(), read(), seekg() and tellg() functions from istream.<br />ofstream: Provides output operations. Contains open() with default output mode. Inherits put(), seekp(), tellp() and write() functions from ostream.<br />fstream: Provides support for simultaneous input and output operations. Inherits all the functions from istream and ostream from iostream.<br />filebuf: Its purpose is to set the file buffers to read and write.<br />ios :: in: Open file for reading only. ios :: out: Open file for writing only.<br />ios :: app: Append to end-of-file. ios :: ate: Go to end-of-file on opening.<br />ios :: binary: Binary file. ios :: trunc: Delete content of file if exists.<br />ios :: nocreate: Open fails if the file does not exist. ios :: noreplace: Open fails if the file already exists.<br />Each file has two associated pointers known as the file pointers.<br />One of them is called input pointer (or get pointer) and the other is called output pointer (or put pointer).<br />Input pointer is used for reading the content of a given file location.<br />Output pointer is used for writing to a given file location.<br /><br />GTU - Computer Engineering (CE) - Semester 4 - 2140703 - Object Oriented Programming with C++ - Concepts of C++ - Introduction to Object Oriented Programming<br /><br />Object-Oriented Programming with C++ PPTs are available here: <a rel="nofollow" target="blank" href="http://www.darshan.ac.in/DIET/CE/GTU-Computer-Engineering-Study-Material">http://www.darshan.ac.in/DIET/CE/GTU-Computer-Engineering-Study-Material</a><br /><br />This video is recorded by Prof. Rupesh Vaishnav (rupesh.vaishnav@darshan.ac.in, +91-9428037452) at Computer Engineering Department of Darshan Institute of Engineering &amp; Technology, Rajkot as per GTU Syllabus. <br /><br />Darshan Institute of Engineering &amp; Technology, Rajkot is a leading institute offering undergraduate, graduate and postgraduate programs in engineering. The Institute is affiliated to the Gujarat Technological University (GTU) and approved by the AICTE, New Delhi. <br /><br />Visit us: <a rel="nofollow" target="blank" href="http://www.darshan.ac.in">http://www.darshan.ac.in</a><br />Write us: info@darshan.ac.in<br />Facebook: <a rel="nofollow" target="blank" href="https://www.facebook.com/DarshanInstitute.Official">https://www.facebook.com/DarshanInstitute.Official</a><br />Twitter: <a rel="nofollow" target="blank" href="https://www.twitter.com/darshan_inst">https://www.twitter.com/darshan_inst</a><br />Instagram: <a rel="nofollow" target="blank" href="https://www.instagram.com/darshan_inst/">https://www.instagram.com/darshan_inst/</a>
+</div>
+                        <div class="d-none"><span>file handling in C++</span><span>open</span><span>read</span></div>
+                        <hr/>
+                        <div class="py-3">
+     <div id="disqus_thread"></div>
+                            <script>
+                            var disqus_config = function () {
+                                this.page.url = "https://devomez.github.io/videos/watch/7-04-reading-from-file-and-writing-into-file-c";
+                                this.page.vid_identifier = "/videos/watch/7-04-reading-from-file-and-writing-into-file-c";
+                            };
+                            
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = 'https://xlx.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                         </div>
+                    </div>
+                </div>
+                <div class="position-sticky fixed-top d-md-block d-none">
+                    <div align="center" class="py-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="mb-4">
+                <div class="resp-container py-3" id="sidebar_300"></div>
+            </div>
+                
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/getting-delay-without-using-any-effects">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/MNzBFgwkU0A/mqdefault.jpg" alt="Getting Delay, without using any effects...">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Getting Delay, without using any effects...</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/cxgre5vnycw">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/CxGre5Vnycw/mqdefault.jpg" alt="머리 자르기 싫은 강아지의 귀여운 행동">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">머리 자르기 싫은 강아지의 귀여운 행동</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/principle-simple-character-animation-jumping-donut">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/qYCPoqwmQK4/mqdefault.jpg" alt="Principle - Simple Character Animation (Jumping Donut)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Principle - Simple Character Animation (Jumping Donut)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/7-effective-exercises-to-tone-up-and-lose-weight">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/HvMaYXXMGEQ/mqdefault.jpg" alt="7 Effective Exercises to Tone Up and Lose Weight">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">7 Effective Exercises to Tone Up and Lose Weight</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/followers-m3a-rabab-salman-s-familly">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ay4l2QFQeUs/mqdefault.jpg" alt="Followers M3a Rabab: Salman&#39;s Familly - الحلقة الكاملة">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Followers M3a Rabab: Salman&#39;s Familly - الحلقة الكاملة</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/nna-tuu-many-parents-are-vict1ms-of-this-check-it-out">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Ld1DSBzG9GU/mqdefault.jpg" alt="NNA TUU: MANY PARENTS ARE VICT1MS OF THIS. CHECK IT OUT">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">NNA TUU: MANY PARENTS ARE VICT1MS OF THIS. CHECK IT OUT</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/freeman-dyson-posits-qm-cannot-be-a-complete-description-of-nature-j-a">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/-HjF4yvgOlo/mqdefault.jpg" alt="Freeman Dyson posits &quot;QM cannot be a complete description of nature&quot; @ J.A. Wheeler&#39;s 90th birthday">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Freeman Dyson posits &quot;QM cannot be a complete description of nature&quot; @ J.A. Wheeler&#39;s 90th birthday</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/bulldogs-frantically-warn-tv-canine-of-danger-in-classic-horror-scene">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/UvjVbXA34pQ/mqdefault.jpg" alt="Bulldogs Frantically Warn TV Canine Of Danger in Classic Horror Scene">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Bulldogs Frantically Warn TV Canine Of Danger in Classic Horror Scene</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/don-t-do-these-things-in-school">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/nyHJxS3nf-k/mqdefault.jpg" alt="DON&#39;T DO THESE THINGS IN SCHOOL!!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">DON&#39;T DO THESE THINGS IN SCHOOL!!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/10-22-2020-thursday-of-the-twenty-ninth-week-in-ordinary-time-6-30am-e">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/t_2uG8UGJPk/mqdefault.jpg" alt="10/22/2020 –Thursday of the Twenty-ninth Week in Ordinary Time –6:30AM English Mass">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">10/22/2020 –Thursday of the Twenty-ninth Week in Ordinary Time –6:30AM English Mass</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/best-icon-swaps-to-pick-why-fifa-21">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/nz8u8GcIsa0/mqdefault.jpg" alt="BEST ICON SWAPS TO PICK &amp; WHY!? (FIFA 21)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">BEST ICON SWAPS TO PICK &amp; WHY!? (FIFA 21)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/rising-waters-a-warmer-world">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/7e7QAQVHb0Y/mqdefault.jpg" alt="Rising Waters: A Warmer World">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Rising Waters: A Warmer World</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/this-clutch-might-get-me-signed-to-100t-cod-warzone-gameplay">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/PQsoLtHIk7c/mqdefault.jpg" alt="THIS CLUTCH MIGHT GET ME SIGNED TO 100T! COD: Warzone Gameplay">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">THIS CLUTCH MIGHT GET ME SIGNED TO 100T! COD: Warzone Gameplay</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/chapter-2-force-vectors">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/8cyYqzlvSmg/mqdefault.jpg" alt="Chapter 2 - Force Vectors">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Chapter 2 - Force Vectors</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/grumpy-grumpier-old-men-bloopers">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/xltk859iHcE/mqdefault.jpg" alt="Grumpy &amp; Grumpier Old Men Bloopers">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Grumpy &amp; Grumpier Old Men Bloopers</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/haiyaa-will-be-someone-s-last-words-rice-to-meet-you-87">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/S54fxEqRbEE/mqdefault.jpg" alt="&quot;HAIYAA&quot; Will be Someone&#39;s Last Words - Rice To Meet You #87">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">&quot;HAIYAA&quot; Will be Someone&#39;s Last Words - Rice To Meet You #87</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/funny-and-useful-diy-school-supplies-ideas-and-school-hacks">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/-L87pQcHzoc/mqdefault.jpg" alt="Funny and Useful DIY! School Supplies Ideas and School Hacks">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Funny and Useful DIY! School Supplies Ideas and School Hacks</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/abu-lovely-fun-eating-watermelon-stella-is-a-calm-girl">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/1w20bFJAJyk/mqdefault.jpg" alt="Abu Lovely Fun Eating Watermelon | Stella Is A Calm Girl">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Abu Lovely Fun Eating Watermelon | Stella Is A Calm Girl</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/twice-heart-shaker-m-v">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/rRzxEiBLQCA/mqdefault.jpg" alt="TWICE &quot;Heart Shaker&quot; M/V">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">TWICE &quot;Heart Shaker&quot; M/V</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/catalin-morosanu-si-a-luat-revansa-cu-daniel-sam">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Ky95Jv0QuYU/mqdefault.jpg" alt="Catalin Morosanu si-a luat revansa cu Daniel Sam">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Catalin Morosanu si-a luat revansa cu Daniel Sam</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/why-more-millennials-are-quitting-lucrative-jobs-to-travel">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Gbb08hg1LLc/mqdefault.jpg" alt="Why more millennials are quitting lucrative jobs to travel">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Why more millennials are quitting lucrative jobs to travel</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/katy-perry-harleys-in-hawaii-official">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/sQEgklEwhSo/mqdefault.jpg" alt="Katy Perry - Harleys In Hawaii (Official)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Katy Perry - Harleys In Hawaii (Official)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/nasio-herb-and-loving-roots-reggae">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/l3eMUc7IJag/mqdefault.jpg" alt="Nasio - Herb And Loving roots reggae">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Nasio - Herb And Loving roots reggae</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/melanie-martinez-soap-lyrics">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/k4INC0yk_vo/mqdefault.jpg" alt="Melanie Martinez - Soap (Lyrics)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Melanie Martinez - Soap (Lyrics)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/terrifying-camping-styles-you-should-definitely-stay-away-from">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/2UgIrV6-MGA/mqdefault.jpg" alt="Terrifying Camping Styles You Should DEFINITELY Stay Away From">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Terrifying Camping Styles You Should DEFINITELY Stay Away From</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/winter-adaptations">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/NK058-HUK24/mqdefault.jpg" alt="Winter Adaptations">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Winter Adaptations</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/fatal-motor-vehicle-accident">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/8wNjgt2hJg4/mqdefault.jpg" alt="FATAL  Motor Vehicle Accident">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">FATAL  Motor Vehicle Accident</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/proven-facts">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Z3pE_t89ymA/mqdefault.jpg" alt="Proven Facts">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Proven Facts</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/ornamental-stitch">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/1oydma2qaoU/mqdefault.jpg" alt="Ornamental Stitch">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Ornamental Stitch</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/traumatic-brain-injury-who-needs-repeat-ct-head-english-2017">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/MiHoitquYew/mqdefault.jpg" alt="Traumatic Brain Injury: Who Needs Repeat CT Head? (English) 2017">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Traumatic Brain Injury: Who Needs Repeat CT Head? (English) 2017</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/etalks-the-secrets-of-food-marketing">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/mKTORFmMycQ/mqdefault.jpg" alt="eTalks - The Secrets of Food Marketing">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">eTalks - The Secrets of Food Marketing</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/stacks-120-for-massive-pk-superior-special-atks-hcim-old-school-runesc">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Z7pXNgCqWLM/mqdefault.jpg" alt="Stacks 120 For Massive PK | Superior Special Atks HCIM |Old School RuneScape Highlights OSRS">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Stacks 120 For Massive PK | Superior Special Atks HCIM |Old School RuneScape Highlights OSRS</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/jpmorgan-emerging-markets-outlook-better-than-developed">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/r2umCBd_eUg/mqdefault.jpg" alt="JPMorgan: Emerging Markets&#39; Outlook Better Than Developed">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">JPMorgan: Emerging Markets&#39; Outlook Better Than Developed</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/shaggy-boombastic-official-music-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6W5pq4bIzIw/mqdefault.jpg" alt="Shaggy - Boombastic (Official Music Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Shaggy - Boombastic (Official Music Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-find-the-square-root-of-a-large-number-by-factoring">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Xsk5w6jdQ30/mqdefault.jpg" alt="How To Find The Square Root of a Large Number By Factoring">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How To Find The Square Root of a Large Number By Factoring</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-choice-of-life-middle-ages">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/A61LfIsAUMo/mqdefault.jpg" alt="The Choice of Life: Middle Ages - КОРОЛЬ И ШУТ [Полное прохождение на русском]">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Choice of Life: Middle Ages - КОРОЛЬ И ШУТ [Полное прохождение на русском]</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/michael-jackson-give-in-to-me-official-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/LJ7qXHjxj_0/mqdefault.jpg" alt="Michael Jackson - Give In To Me (Official Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Michael Jackson - Give In To Me (Official Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/you-need-to-know-how-important-you-are-watch-this">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/8NAYuQGAE50/mqdefault.jpg" alt="You Need To Know How Important You Are  | (WATCH THIS !!)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">You Need To Know How Important You Are  | (WATCH THIS !!)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/lecture-15-how-to-manage-ben-horowitz">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/uVhTvQXfibU/mqdefault.jpg" alt="Lecture 15 - How to Manage (Ben Horowitz)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Lecture 15 - How to Manage (Ben Horowitz)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/what-is-error-and-types-of-computer-network">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/icVX5USqIHs/mqdefault.jpg" alt="What is error and types of computer network">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">What is error and types of computer network</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/old-ashok-leyland-truck-unexpected-accident-with-heavy-load-and-luckil">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/7tjrPHyiajM/mqdefault.jpg" alt="Old Ashok Leyland Truck Unexpected Accident with heavy Load and Luckily Driver Escaped">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Old Ashok Leyland Truck Unexpected Accident with heavy Load and Luckily Driver Escaped</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/are-political-parties-trying-to-cash-in-on-farmer-protests-abp-news">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/kqhRVQRMdjU/mqdefault.jpg" alt="Are Political Parties Trying To Cash In On Farmer Protests? | ABP News">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Are Political Parties Trying To Cash In On Farmer Protests? | ABP News</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/top-5-used-car-inspection-tips-and-tricks">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6vZXLaP6Sok/mqdefault.jpg" alt="Top 5 Used Car Inspection Tips and Tricks">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Top 5 Used Car Inspection Tips and Tricks</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/seeking-arrangement-review-is-seeking-arrangement-legit">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/M-TYe4t3xu8/mqdefault.jpg" alt="🔎Seeking Arrangement Review 🤷 [Is Seeking Arrangement Legit?]">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">🔎Seeking Arrangement Review 🤷 [Is Seeking Arrangement Legit?]</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/remembering-a-time-for-choosing">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ulQ7kJIhZqg/mqdefault.jpg" alt="Remembering &quot;A Time for Choosing&quot;">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Remembering &quot;A Time for Choosing&quot;</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/pick-a-corner-engaging-students-and-encouraging-critical-thinking">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/IqOGmKNS6LI/mqdefault.jpg" alt="Pick a Corner: Engaging Students and Encouraging Critical Thinking">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Pick a Corner: Engaging Students and Encouraging Critical Thinking</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/puscifer-simultaneous">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/0Gscw5l_roo/mqdefault.jpg" alt="Puscifer  -  Simultaneous">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Puscifer  -  Simultaneous</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/when-to-use-the-article-in-english-language-grammar-go-natural-english">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/57VZNwrZsN0/mqdefault.jpg" alt="When to Use &quot;THE&quot; Article in English Language Grammar | Go Natural English">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">When to Use &quot;THE&quot; Article in English Language Grammar | Go Natural English</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/cosy-baking-day-3-easy-bakes-to-try-this-winter-coffee-recipes-ad">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/VgYgQ9al9MY/mqdefault.jpg" alt="COSY BAKING DAY | 3 EASY BAKES TO TRY THIS WINTER | COFFEE RECIPES | ad">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">COSY BAKING DAY | 3 EASY BAKES TO TRY THIS WINTER | COFFEE RECIPES | ad</h2>
+    </div>
+
+
+            </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        function load_vid() { var player = document.getElementById('video-player'); player.innerHTML = labnolThumb(); player.onclick = labnolIframe; } function labnolThumb() { return '<div class="d-flex align-items-center justify-content-center"><div class="image-16by9"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/zXrLjAFzA-s/hqdefault.jpg"></div><div class="v-play-btn"></div></div>'; } function labnolIframe() { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube-nocookie.com/embed/zXrLjAFzA-s?rel=0&amp;showinfo=0"); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("allowfullscreen", "1"); var div = document.createElement("div"); div.setAttribute("class", "embed-responsive embed-responsive-16by9"); div.innerHTML = iframe.outerHTML; this.parentNode.replaceChild(div, this); } load_vid()
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <footer class="mt-auto bg-white pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">Devomez Network</h5>
+                    <p>Entertainment content from all over the web.</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="">DMCA</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3"> © Copyright : <a target="_blank" rel="noopener" href="https://www.youtube.com"> youtube.com</a></div>
+    </footer>
+    <script>
+        var cb = function() { var link = document.createElement('link'); link.rel = 'stylesheet'; link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css'; var h = document.getElementsByTagName('head')[0]; h.appendChild(link); if (link.addEventListener) { link.addEventListener('load', function() { document.getElementById('preloading').style.display = "none"; }, false); } }; var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame; if (raf) raf(cb); else window.addEventListener('load', cb);
+    </script>
+    <script async="" src="https://devomez.github.io/js/app.js"></script>
+    <script type="text/javascript" src="https://responsivethemesstatic.github.io/static/wp.js"></script>
+    <script type="text/javascript">
+        if(!Histats_variables){var Histats_variables=[];}
+        Histats_variables.push("tags","https://devomez.github.io");
+        var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4360507,4,0,0,0,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+</body>
+</html>
