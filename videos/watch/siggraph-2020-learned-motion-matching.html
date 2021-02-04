@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//images1-focus-opensocial.googleusercontent.com" />
+    <link rel="dns-prefetch" href="//static.addtoany.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msvalidate.01" content="">
+    <meta name="yandex-verification" content="">
+    <meta name="google-site-verification" content="U8P9vWmxhlkYi9hrkd-PqbXzDMY8ijgp386LNJOgJAg">
+    <meta charset="utf-8" />
+    <title>SIGGRAPH 2020 | Learned Motion Matching</title>
+    <meta name="description" content="">
+	<meta name="keywords" content="SIGGRAPH,Learned,Motion">
+    <meta property="og:site_name" content="Devomez">
+    <meta property="og:url" content="https://devomez.github.io/videos/watch/siggraph-2020-learned-motion-matching">
+    <meta property="og:title" content="SIGGRAPH 2020 | Learned Motion Matching">
+    <meta property="og:image" content="https://i.ytimg.com/vi/16CHDQK4W5k/hqdefault.jpg">
+    <meta property="og:description" content="">
+    <meta name='twitter:card' content='summary_large_image' />
+    <script type="application/ld+json">
+        { "@context": "http://schema.org", "@type": "VideoObject", "name": "SIGGRAPH 2020 | Learned Motion Matching", "description": "\r\n", "thumbnailUrl": "https://i.ytimg.com/vi/16CHDQK4W5k/hqdefault.jpg", "uploadDate": "2020-07-31T18:34:17Z", "duration": "PT4M15S", "contentUrl": "https://devomez.github.io/videos/watch/siggraph-2020-learned-motion-matching", "interactionCount": "17340" }
+    </script>
+    <link rel="canonical" href="https://devomez.github.io/videos/watch/siggraph-2020-learned-motion-matching" />
+    <link rel="stylesheet" href="https://devomez.github.io/inc/main.css">
+    <noscript><style>#preloading{display: none}</style></noscript>
+</head>
+<body class="bg-light">
+    <div id="preloading">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar mb-3 navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
+        <div class="container py-2"><a class="navbar-brand" href="/">Devomez</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-urls" aria-controls="navbar-urls" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <form
+                action="/videos/search/" class="my-2 my-lg-0 offset-md-2 col-md-6 col-sm-12 px-0 mr-auto">
+                <div class="input-group"><input name="s" class="form-control rounded-0 py-2" type="text" placeholder="video search..." id="example-search-input"><span class="input-group-append"><button aria-label="search" role="button" class="btn btn-secondary rounded-0" type="submit"><span class="px-2"><svg class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></span></button>
+                    </span>
+                </div>
+                </form>
+                <div class="collapse navbar-collapse flex-md-grow-0" id="navbar-urls">
+
+                </div>
+        </div>
+    </nav>
+    <div class="container min-height-62" >
+        <div class="resp-container" id="top_720"></div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="bg-white"><noscript><a href="https://www.youtube.com/watch?v=16CHDQK4W5k"><img alt="SIGGRAPH 2020 | Learned Motion Matching" src="https://i.ytimg.com/vi/16CHDQK4W5k/hqdefault.jpg" /></a></noscript>
+                    <div id="video-player"></div>
+                    <div class="p-3">
+                        <h1 class="h5 video-title bwr">SIGGRAPH 2020 | Learned Motion Matching</h1>
+                        <div class="py-1 row">
+                            <div class="col-12 col-md-6 my-auto"><b class="text-danger">Share this & earn $10</b></div>
+                            <div class="col-12 col-md-6">
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_reddit"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_whatsapp"></a></div>
+                            </div>
+                        </div>
+                        <div align="center" class="py-1">
+
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-2 bwr"><strong>Ubisoft La Forge</strong><br> Published at : 04 Feb 2021  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="h-100 d-flex align-items-center justify-content-center"><a  target="_blank" rel="noopener" class="btn btn-block btn-danger bwr" href="https://www.youtube.com/watch?v=16CHDQK4W5k">Subscribe to Ubisoft La Forge</a></div>
+                                </div>
+                            </div>
+                            <div class="resp-container" id="in_post_bottomads"></div>
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="text-center bg-light mb-2 p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"></path></svg></span>                                        17340 views </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg></span>                                                735 </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg></span>                                                2 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="py-1 d-md-block bwr" id="video-description">
+</div>
+                        <div class="d-none"><span>SIGGRAPH</span><span>Learned</span><span>Motion</span></div>
+                        <hr/>
+                        <div class="py-3">
+     <div id="disqus_thread"></div>
+                            <script>
+                            var disqus_config = function () {
+                                this.page.url = "https://devomez.github.io/videos/watch/siggraph-2020-learned-motion-matching";
+                                this.page.vid_identifier = "/videos/watch/siggraph-2020-learned-motion-matching";
+                            };
+                            
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = 'https://xlx.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                         </div>
+                    </div>
+                </div>
+                <div class="position-sticky fixed-top d-md-block d-none">
+                    <div align="center" class="py-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="mb-4">
+                <div class="resp-container py-3" id="sidebar_300"></div>
+            </div>
+                
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/what-dreams-reveal-about-our-secrets-and-desires-deborah-levy-swf-2015">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/dw09SUUdQic/mqdefault.jpg" alt="What Dreams Reveal About Our Secrets and Desires | Deborah Levy | SWF 2015">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">What Dreams Reveal About Our Secrets and Desires | Deborah Levy | SWF 2015</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/grandson-6-00-official-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5UjUBRbwI10/mqdefault.jpg" alt="grandson: 6:00 [OFFICIAL VIDEO]">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">grandson: 6:00 [OFFICIAL VIDEO]</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/doctors-kim-rae-won-park-shin-hye-kiss-scene-romantic-scene-love-scene">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Y3Ok5ImEXLQ/mqdefault.jpg" alt="[Doctors] 닥터스 Kim rae won park shin hye kiss scene - Romantic scene - love scene - smile scene">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">[Doctors] 닥터스 Kim rae won park shin hye kiss scene - Romantic scene - love scene - smile scene</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-write-a-blog-post-that-actually-gets-traffic">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/-kOT39l0omU/mqdefault.jpg" alt="How to Write a Blog Post That Actually Gets Traffic">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How to Write a Blog Post That Actually Gets Traffic</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/ynw-melly-ft-kanye-west-mixed-personalities-lyrics">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/AoHz8FgOQhs/mqdefault.jpg" alt="YNW Melly ft. Kanye West - Mixed Personalities (Lyrics) ♪">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">YNW Melly ft. Kanye West - Mixed Personalities (Lyrics) ♪</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-transfer-migrate-an-entire-wordpress-site-to-new-host-in-10-min">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/8m74NiGiOpQ/mqdefault.jpg" alt="How to Transfer/Migrate an Entire WordPress Site to New Host in 10 minutes - Duplicator Plugin">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How to Transfer/Migrate an Entire WordPress Site to New Host in 10 minutes - Duplicator Plugin</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/spotify-logo-redesign-w-everton-gargioni">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/XbN0HAaFCOo/mqdefault.jpg" alt="Spotify Logo Redesign w/Everton Gargioni">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Spotify Logo Redesign w/Everton Gargioni</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/blac-youngsta-this-is-what-2-million-in-cash-looks-like">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/X6d4JZStL78/mqdefault.jpg" alt="Blac Youngsta This Is What 2 Million in Cash Looks Like">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Blac Youngsta This Is What 2 Million in Cash Looks Like</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/phonics-worksheets-digraphs-will-make-your-kid-smarter-and-allows-them">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/tGBmV0e6G5I/mqdefault.jpg" alt="Phonics Worksheets Digraphs will make your kid smarter and allows them to develop self-confiden...">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Phonics Worksheets Digraphs will make your kid smarter and allows them to develop self-confiden...</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/miranda-lambert-settling-down-official-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/EQfm-Qqy-wU/mqdefault.jpg" alt="Miranda Lambert - Settling Down (Official Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Miranda Lambert - Settling Down (Official Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-make-an-elephant-appear">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/2-WHR8muZk0/mqdefault.jpg" alt="HOW TO MAKE AN ELEPHANT APPEAR!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">HOW TO MAKE AN ELEPHANT APPEAR!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/next-generation-dancers-sierra-neudeck-floor-rookies-the-rage">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/nSMAd9jLYKU/mqdefault.jpg" alt="Next Generation Dancers - Sierra Neudeck - Floor Rookies (The Rage)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Next Generation Dancers - Sierra Neudeck - Floor Rookies (The Rage)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-play-big-chords-that-hurt-your-hand-on-the-piano-3-tips">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/9AXPVfn0Fnc/mqdefault.jpg" alt="How To Play Big Chords That Hurt Your Hand On The Piano (3 Tips)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How To Play Big Chords That Hurt Your Hand On The Piano (3 Tips)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/most-simple-beautiful-design-on-net-fabric-with-normal-stitching-needl">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/m1XGPeCBsGg/mqdefault.jpg" alt="Most Simple &amp; Beautiful Design on Net Fabric with Normal Stitching Needle-Aari/Maggamwork/Embroidery">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Most Simple &amp; Beautiful Design on Net Fabric with Normal Stitching Needle-Aari/Maggamwork/Embroidery</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/stacy-turned-into-a-funny-cat">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/kgplQ9vjTtk/mqdefault.jpg" alt="Stacy turned into a funny cat">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Stacy turned into a funny cat</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-fix-error-unable-to-resolve-host">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/cvazO6i0i5s/mqdefault.jpg" alt="How to fix error &quot;unable to resolve host&quot;">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How to fix error &quot;unable to resolve host&quot;</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/jarrod-lawson-featuring-jubu-smith-live-in-portland-2020">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/1KV0w6jjCgk/mqdefault.jpg" alt="JARROD LAWSON featuring JUBU SMITH - Live in Portland 2020">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">JARROD LAWSON featuring JUBU SMITH - Live in Portland 2020</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/always-lyric-video-for-the-hit-worship-song-made-popular-at-passion-co">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5vptF6oVycE/mqdefault.jpg" alt="ALWAYS (Lyric Video) for the Hit worship song made popular at Passion Conference">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">ALWAYS (Lyric Video) for the Hit worship song made popular at Passion Conference</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/simply-red-stars-live-in-hamburg-1992">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/HJmk25b4Acs/mqdefault.jpg" alt="Simply Red  - Stars (Live In Hamburg, 1992)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Simply Red  - Stars (Live In Hamburg, 1992)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/i-simply-cannot-express-myself">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/UIbzSNWf1u8/mqdefault.jpg" alt="I simply cannot express myself.">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">I simply cannot express myself.</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/flying-the-saab-340b-pacific-coastal-cranbrook-to-vancouver">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/2yv4PPlUj5A/mqdefault.jpg" alt="FLYING THE SAAB 340B! Pacific Coastal Cranbrook to Vancouver">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">FLYING THE SAAB 340B! Pacific Coastal Cranbrook to Vancouver</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/who-are-you-i-m-pam-who-are-you-i-m-the-owner-of-this-house-tiktok">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/kJDSVY7ivZs/mqdefault.jpg" alt="Who are you I&#39;m Pam Who are you I&#39;m the owner of this house | Tiktok">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Who are you I&#39;m Pam Who are you I&#39;m the owner of this house | Tiktok</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/a-refined-tradition">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/qr3l8tlsG84/mqdefault.jpg" alt="A Refined Tradition">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">A Refined Tradition</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-rogues-triumph-over-will-audio-only">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/fbMVIMq99eg/mqdefault.jpg" alt="The Rogues - Triumph Over Will (Audio Only)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Rogues - Triumph Over Will (Audio Only)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/message-to-those-falling-out-of-the-struggle-as-a-result-of-name-calli">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/dfarJ7QhQis/mqdefault.jpg" alt="Message to Those Falling Out of the Struggle as a Result of “Name-Calling”">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Message to Those Falling Out of the Struggle as a Result of “Name-Calling”</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/reaping-tobacco-s-benefits">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/BBCBd_RIjEI/mqdefault.jpg" alt="Reaping tobacco&#39;s benefits">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Reaping tobacco&#39;s benefits</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/run-for-cover-marcus-miller-bass-cover-slap-fender-jazz-bass-deluxe">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/xXEK8EnxftA/mqdefault.jpg" alt="Run For Cover - Marcus Miller [Bass cover - Slap] (Fender Jazz Bass Deluxe)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Run For Cover - Marcus Miller [Bass cover - Slap] (Fender Jazz Bass Deluxe)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/cheating-girlfriend-prank-gone-wrong-2016-pranks-in-india-one-in-all">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/gwIuyopTBzU/mqdefault.jpg" alt="Cheating Girlfriend Prank Gone WRONG | 2016 Pranks in India | One in ALL">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Cheating Girlfriend Prank Gone WRONG | 2016 Pranks in India | One in ALL</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/biggest-megacities-by-2050">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/tr2yaVbznaQ/mqdefault.jpg" alt="Biggest Megacities by 2050">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Biggest Megacities by 2050</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/5-minute-couples-workout-no-equipment-at-home-with-cirque-du-soleil">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6q4IUQzt3dA/mqdefault.jpg" alt="5 Minute Couples Workout - No Equipment At Home with Cirque du Soleil">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">5 Minute Couples Workout - No Equipment At Home with Cirque du Soleil</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/reiki-music-emotional-healing-music-reiki-healing-meditation-music-for">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/vcjziclwGNo/mqdefault.jpg" alt="Reiki Music: Emotional healing music, reiki healing, meditation music for positive energy 30111R">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Reiki Music: Emotional healing music, reiki healing, meditation music for positive energy 30111R</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/i-still-have-nothing-not-even-a-pistol-just-a-snipe-r">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/OgxYz4MLBfk/mqdefault.jpg" alt="I still have nothing not even a pistol just a snipe😂😂r">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">I still have nothing not even a pistol just a snipe😂😂r</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/friend-or-foe-does-sunscreen-cause-skin-cancer-medical-myth">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5GfNRP-YP8c/mqdefault.jpg" alt="Friend or Foe: Does sunscreen cause skin cancer? (Medical myth)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Friend or Foe: Does sunscreen cause skin cancer? (Medical myth)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-lost-art-of-simplicity-bryan-byrd-tedxkatuah-2013">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/ihXyiVnJu78/mqdefault.jpg" alt="The lost art of simplicity | Bryan Byrd | TEDxKatuah 2013">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The lost art of simplicity | Bryan Byrd | TEDxKatuah 2013</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/managing-older-employees-how-to-manage-more-experienced-team-members">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/SoSbA24vRKQ/mqdefault.jpg" alt="Managing Older Employees | How To Manage More Experienced Team Members">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Managing Older Employees | How To Manage More Experienced Team Members</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-use-the-rsi-indicator-for-perfect-entries">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/91_4frTd0Yc/mqdefault.jpg" alt="How To Use The RSI Indicator For PERFECT ENTRIES">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How To Use The RSI Indicator For PERFECT ENTRIES</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-reason-why-i-ll-be-leaving-soon">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/dUmvNP34mpU/mqdefault.jpg" alt="The Reason Why I&#39;ll be Leaving Soon...">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Reason Why I&#39;ll be Leaving Soon...</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/askthemayomom-about-about-identifying-and-treating-anxiety-in-kids-and">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/TWBjq2Of7Rg/mqdefault.jpg" alt="#AsktheMayoMom about about Identifying and Treating Anxiety in Kids and Teens">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">#AsktheMayoMom about about Identifying and Treating Anxiety in Kids and Teens</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/what-is-a-primary-source-by-shmoop">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Wlj7t0s4rok/mqdefault.jpg" alt="What is a Primary Source? by Shmoop">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">What is a Primary Source? by Shmoop</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/fall-2020-midnight-regulatory-agenda-h1b-visa-h4-ead-removal-f1-gc-b1">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/mS0Cy2q365M/mqdefault.jpg" alt="Fall 2020 Midnight Regulatory Agenda - H1B Visa, H4 EAD Removal, F1, GC, B1, Others">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Fall 2020 Midnight Regulatory Agenda - H1B Visa, H4 EAD Removal, F1, GC, B1, Others</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/enzymes-a-fun-introduction">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/XTUm-75-PL4/mqdefault.jpg" alt="Enzymes- a fun introduction">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Enzymes- a fun introduction</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/twin-problems-merrell-twins">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Ltr-SUA2CYc/mqdefault.jpg" alt="TWIN PROBLEMS - Merrell Twins">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">TWIN PROBLEMS - Merrell Twins</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/belly-consuela-ft-young-thug-zack-official-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/m992Mqc2wqo/mqdefault.jpg" alt="Belly - Consuela ft. Young Thug, Zack (Official Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Belly - Consuela ft. Young Thug, Zack (Official Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/wanna-die-buxboss-ft-1000th">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/RtsmcM7TgNQ/mqdefault.jpg" alt="อยากตาย ( WANNA DIE ) - BUXBOSS  Ft. 1000TH">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">อยากตาย ( WANNA DIE ) - BUXBOSS  Ft. 1000TH</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/subliminal-cuts-le-voie-le-soleil-xl-recordings">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/HP78tlr9AhA/mqdefault.jpg" alt="subliminal cuts le voie le soleil xl recordings">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">subliminal cuts le voie le soleil xl recordings</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/3-way-to-complete-surf-kitsune-secret">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/MmC8K7I-oNg/mqdefault.jpg" alt="3 way to complete surf kitsune + secret">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">3 way to complete surf kitsune + secret</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/millions-face-eviction-as-housing-protections-set-to-expire">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/NV7t5Mh-rfU/mqdefault.jpg" alt="Millions face eviction as housing protections set to expire">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Millions face eviction as housing protections set to expire</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/every-so-often-learn-english-with-phrases-from-tv-series-aseasyaspie">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/S7TCj9nlUXw/mqdefault.jpg" alt="Every so often - Learn English with phrases from TV series - AsEasyAsPIE">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Every so often - Learn English with phrases from TV series - AsEasyAsPIE</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/one-ok-rock-the-same-as-lyrics-indonesian-translate">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/KuoIFbwzd0w/mqdefault.jpg" alt="ONE OK ROCK ~ The Same as (Lyrics + Indonesian Translate)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">ONE OK ROCK ~ The Same as (Lyrics + Indonesian Translate)</h2>
+    </div>
+
+
+            </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        function load_vid() { var player = document.getElementById('video-player'); player.innerHTML = labnolThumb(); player.onclick = labnolIframe; } function labnolThumb() { return '<div class="d-flex align-items-center justify-content-center"><div class="image-16by9"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/16CHDQK4W5k/hqdefault.jpg"></div><div class="v-play-btn"></div></div>'; } function labnolIframe() { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube-nocookie.com/embed/16CHDQK4W5k?rel=0&amp;showinfo=0"); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("allowfullscreen", "1"); var div = document.createElement("div"); div.setAttribute("class", "embed-responsive embed-responsive-16by9"); div.innerHTML = iframe.outerHTML; this.parentNode.replaceChild(div, this); } load_vid()
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <footer class="mt-auto bg-white pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">Devomez Network</h5>
+                    <p>Entertainment content from all over the web.</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="">DMCA</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3"> © Copyright : <a target="_blank" rel="noopener" href="https://www.youtube.com"> youtube.com</a></div>
+    </footer>
+    <script>
+        var cb = function() { var link = document.createElement('link'); link.rel = 'stylesheet'; link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css'; var h = document.getElementsByTagName('head')[0]; h.appendChild(link); if (link.addEventListener) { link.addEventListener('load', function() { document.getElementById('preloading').style.display = "none"; }, false); } }; var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame; if (raf) raf(cb); else window.addEventListener('load', cb);
+    </script>
+    <script async="" src="https://devomez.github.io/js/app.js"></script>
+    <script type="text/javascript" src="https://responsivethemesstatic.github.io/static/wp.js"></script>
+    <script type="text/javascript">
+        if(!Histats_variables){var Histats_variables=[];}
+        Histats_variables.push("tags","https://devomez.github.io");
+        var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4360507,4,0,0,0,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+</body>
+</html>
