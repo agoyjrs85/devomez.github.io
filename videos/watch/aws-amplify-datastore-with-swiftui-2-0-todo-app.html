@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="//images1-focus-opensocial.googleusercontent.com" />
+    <link rel="dns-prefetch" href="//static.addtoany.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msvalidate.01" content="">
+    <meta name="yandex-verification" content="">
+    <meta name="google-site-verification" content="U8P9vWmxhlkYi9hrkd-PqbXzDMY8ijgp386LNJOgJAg">
+    <meta charset="utf-8" />
+    <title>AWS Amplify DataStore with SwiftUI 2.0 | Todo App</title>
+    <meta name="description" content="Today, Kilo Loco goes over how to create a complete Todo app using SwiftUI 2.0 for the interface and AWS Amplify DataStore as t...">
+	<meta name="keywords" content="swiftui 2.0,swiftui,swiftui todo">
+    <meta property="og:site_name" content="Devomez">
+    <meta property="og:url" content="https://devomez.github.io/videos/watch/aws-amplify-datastore-with-swiftui-2-0-todo-app">
+    <meta property="og:title" content="AWS Amplify DataStore with SwiftUI 2.0 | Todo App">
+    <meta property="og:image" content="https://i.ytimg.com/vi/n1mV6m4xBF8/hqdefault.jpg">
+    <meta property="og:description" content="">
+    <meta name='twitter:card' content='summary_large_image' />
+    <script type="application/ld+json">
+        { "@context": "http://schema.org", "@type": "VideoObject", "name": "AWS Amplify DataStore with SwiftUI 2.0 | Todo App", "description": "Today, Kilo Loco goes over how to create a complete Todo app using SwiftUI 2.0 for the interface and AWS Amplify DataStore as the persistence layer.&lt;br /&gt;&lt;br /&gt;We will be covering everything from laying out the UI using List and TextEditor, to adding Amplify DataStore as a dependency and implementing it to save, query, and delete Todo object from the database table running under the hood.&lt;br /&gt;&lt;br /&gt;Anyone looking to implement their first SwiftUI 2.0 app or have a better understanding of how to implement and use AWS Amplify DataStore to create, read, and delete data; will find this tutorial useful.&lt;br /&gt;&lt;br /&gt;*** Show Notes and Links ***&lt;br /&gt;&lt;br /&gt;Project Files:&lt;br /&gt;&lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://kilo-loco.teachable.com/courses/youtube/lectures/21075647&quot;&gt;https://kilo-loco.teachable.com/courses/youtube/lectures/21075647&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Need Help?&lt;br /&gt;&lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://kiloloco.com/membership&quot;&gt;https://kiloloco.com/membership&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Kilo Loco on Social Media:&lt;br /&gt;www.kiloloco.com&lt;br /&gt;YouTube- &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://www.youtube.com/kiloloco&quot;&gt;https://www.youtube.com/kiloloco&lt;/a&gt;&lt;br /&gt;Twitter- &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://twitter.com/kilo_loco&quot;&gt;https://twitter.com/kilo_loco&lt;/a&gt;&lt;br /&gt;Instagram- &lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://instagram.com/kilo_loco&quot;&gt;https://instagram.com/kilo_loco&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;---------GEAR -------&lt;br /&gt;&lt;br /&gt;Code Passionately T-Shirt&lt;br /&gt;&lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;http://a.co/d/53OkIu0&quot;&gt;http://a.co/d/53OkIu0&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Laptop - 2017 MacBook Pro&lt;br /&gt;&lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://amzn.to/2tk5yLr&quot;&gt;https://amzn.to/2tk5yLr&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Keyboard - Anne Pro 2&lt;br /&gt;&lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://amzn.to/2RvBcRZ&quot;&gt;https://amzn.to/2RvBcRZ&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Microphone - Blue Yeti&lt;br /&gt;&lt;a rel=&quot;nofollow&quot; target=&quot;blank&quot; href=&quot;https://amzn.to/34swmdC&quot;&gt;https://amzn.to/34swmdC&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;DISCLAIMER: This video and description contains affiliate links, which means that if you click on one of the product links, we’ll receive a small commission. This helps support the channel and allows us to continue to make videos like this. Thank you for the support!&lt;br /&gt;#swiftui #swiftlang #iosdevelopment\r\n", "thumbnailUrl": "https://i.ytimg.com/vi/n1mV6m4xBF8/hqdefault.jpg", "uploadDate": "2020-06-25T03:44:26Z", "duration": "PT40M19S", "contentUrl": "https://devomez.github.io/videos/watch/aws-amplify-datastore-with-swiftui-2-0-todo-app", "interactionCount": "4378" }
+    </script>
+    <link rel="canonical" href="https://devomez.github.io/videos/watch/aws-amplify-datastore-with-swiftui-2-0-todo-app" />
+    <link rel="stylesheet" href="https://devomez.github.io/inc/main.css">
+    <noscript><style>#preloading{display: none}</style></noscript>
+</head>
+<body class="bg-light">
+    <div id="preloading">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar mb-3 navbar-expand-lg navbar-light bg-white mb-4 shadow-sm">
+        <div class="container py-2"><a class="navbar-brand" href="/">Devomez</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-urls" aria-controls="navbar-urls" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <form
+                action="/videos/search/" class="my-2 my-lg-0 offset-md-2 col-md-6 col-sm-12 px-0 mr-auto">
+                <div class="input-group"><input name="s" class="form-control rounded-0 py-2" type="text" placeholder="video search..." id="example-search-input"><span class="input-group-append"><button aria-label="search" role="button" class="btn btn-secondary rounded-0" type="submit"><span class="px-2"><svg class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg></span></button>
+                    </span>
+                </div>
+                </form>
+                <div class="collapse navbar-collapse flex-md-grow-0" id="navbar-urls">
+
+                </div>
+        </div>
+    </nav>
+    <div class="container min-height-62" >
+        <div class="resp-container" id="top_720"></div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div class="bg-white"><noscript><a href="https://www.youtube.com/watch?v=n1mV6m4xBF8"><img alt="AWS Amplify DataStore with SwiftUI 2.0 | Todo App" src="https://i.ytimg.com/vi/n1mV6m4xBF8/hqdefault.jpg" /></a></noscript>
+                    <div id="video-player"></div>
+                    <div class="p-3">
+                        <h1 class="h5 video-title bwr">AWS Amplify DataStore with SwiftUI 2.0 | Todo App</h1>
+                        <div class="py-1 row">
+                            <div class="col-12 col-md-6 my-auto"><b class="text-danger">Share this & earn $10</b></div>
+                            <div class="col-12 col-md-6">
+                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_reddit"></a><a class="a2a_button_facebook_messenger"></a><a class="a2a_button_whatsapp"></a></div>
+                            </div>
+                        </div>
+                        <div align="center" class="py-1">
+
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="mb-2 bwr"><strong>Kilo Loco</strong><br> Published at : 06 Feb 2021  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="h-100 d-flex align-items-center justify-content-center"><a  target="_blank" rel="noopener" class="btn btn-block btn-danger bwr" href="https://www.youtube.com/watch?v=n1mV6m4xBF8">Subscribe to Kilo Loco</a></div>
+                                </div>
+                            </div>
+                            <div class="resp-container" id="in_post_bottomads"></div>
+                        </div>
+                        <div class="py-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="text-center bg-light mb-2 p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-eye fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M569.354 231.631C512.969 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-75.162 0-136-60.827-136-136 0-75.162 60.826-136 136-136 75.162 0 136 60.826 136 136 0 75.162-60.826 136-136 136zm104-136c0 57.438-46.562 104-104 104s-104-46.562-104-104c0-17.708 4.431-34.379 12.236-48.973l-.001.032c0 23.651 19.173 42.823 42.824 42.823s42.824-19.173 42.824-42.823c0-23.651-19.173-42.824-42.824-42.824l-.032.001C253.621 156.431 270.292 152 288 152c57.438 0 104 46.562 104 104z"></path></svg></span>                                        4378 views </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg></span>                                                167 </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-center bg-light p-1 bwr"><span><span class="pr-1"><svg class="svg-inline--fa fa-thumbs-down fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M0 56v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56zm40 200c0-13.255 10.745-24 24-24s24 10.745 24 24-10.745 24-24 24-24-10.745-24-24zm272 256c-20.183 0-29.485-39.293-33.931-57.795-5.206-21.666-10.589-44.07-25.393-58.902-32.469-32.524-49.503-73.967-89.117-113.111a11.98 11.98 0 0 1-3.558-8.521V59.901c0-6.541 5.243-11.878 11.783-11.998 15.831-.29 36.694-9.079 52.651-16.178C256.189 17.598 295.709.017 343.995 0h2.844c42.777 0 93.363.413 113.774 29.737 8.392 12.057 10.446 27.034 6.148 44.632 16.312 17.053 25.063 48.863 16.382 74.757 17.544 23.432 19.143 56.132 9.308 79.469l.11.11c11.893 11.949 19.523 31.259 19.439 49.197-.156 30.352-26.157 58.098-59.553 58.098H350.723C358.03 364.34 384 388.132 384 430.548 384 504 336 512 312 512z"></path></svg></span>                                                7 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="py-1 d-md-block bwr" id="video-description">Today, Kilo Loco goes over how to create a complete Todo app using SwiftUI 2.0 for the interface and AWS Amplify DataStore as the persistence layer.<br /><br />We will be covering everything from laying out the UI using List and TextEditor, to adding Amplify DataStore as a dependency and implementing it to save, query, and delete Todo object from the database table running under the hood.<br /><br />Anyone looking to implement their first SwiftUI 2.0 app or have a better understanding of how to implement and use AWS Amplify DataStore to create, read, and delete data; will find this tutorial useful.<br /><br />*** Show Notes and Links ***<br /><br />Project Files:<br /><a rel="nofollow" target="blank" href="https://kilo-loco.teachable.com/courses/youtube/lectures/21075647">https://kilo-loco.teachable.com/courses/youtube/lectures/21075647</a><br /><br />Need Help?<br /><a rel="nofollow" target="blank" href="https://kiloloco.com/membership">https://kiloloco.com/membership</a><br /><br />Kilo Loco on Social Media:<br />www.kiloloco.com<br />YouTube- <a rel="nofollow" target="blank" href="https://www.youtube.com/kiloloco">https://www.youtube.com/kiloloco</a><br />Twitter- <a rel="nofollow" target="blank" href="https://twitter.com/kilo_loco">https://twitter.com/kilo_loco</a><br />Instagram- <a rel="nofollow" target="blank" href="https://instagram.com/kilo_loco">https://instagram.com/kilo_loco</a><br /><br />---------GEAR -------<br /><br />Code Passionately T-Shirt<br /><a rel="nofollow" target="blank" href="http://a.co/d/53OkIu0">http://a.co/d/53OkIu0</a><br /><br />Laptop - 2017 MacBook Pro<br /><a rel="nofollow" target="blank" href="https://amzn.to/2tk5yLr">https://amzn.to/2tk5yLr</a><br /><br />Keyboard - Anne Pro 2<br /><a rel="nofollow" target="blank" href="https://amzn.to/2RvBcRZ">https://amzn.to/2RvBcRZ</a><br /><br />Microphone - Blue Yeti<br /><a rel="nofollow" target="blank" href="https://amzn.to/34swmdC">https://amzn.to/34swmdC</a><br /><br />DISCLAIMER: This video and description contains affiliate links, which means that if you click on one of the product links, we’ll receive a small commission. This helps support the channel and allows us to continue to make videos like this. Thank you for the support!<br />#swiftui #swiftlang #iosdevelopment
+</div>
+                        <div class="d-none"><span>swiftui 2.0</span><span>swiftui</span><span>swiftui todo</span></div>
+                        <hr/>
+                        <div class="py-3">
+     <div id="disqus_thread"></div>
+                            <script>
+                            var disqus_config = function () {
+                                this.page.url = "https://devomez.github.io/videos/watch/aws-amplify-datastore-with-swiftui-2-0-todo-app";
+                                this.page.vid_identifier = "/videos/watch/aws-amplify-datastore-with-swiftui-2-0-todo-app";
+                            };
+                            
+                            (function() { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+
+                                s.src = 'https://xlx.disqus.com/embed.js';
+
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                         </div>
+                    </div>
+                </div>
+                <div class="position-sticky fixed-top d-md-block d-none">
+                    <div align="center" class="py-2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+            <div class="mb-4">
+                <div class="resp-container py-3" id="sidebar_300"></div>
+            </div>
+                
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/double-repayments-to-pay-out-mortgage-twice-as-fast">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/fl-AcdNsRNM/mqdefault.jpg" alt="Double repayments to pay out mortgage twice as fast?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Double repayments to pay out mortgage twice as fast?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/litecoin-price-prediction-for-2021-ltc-crypto">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/w7Aab2L4tuE/mqdefault.jpg" alt="Litecoin Price Prediction For 2021 [LTC Crypto]">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Litecoin Price Prediction For 2021 [LTC Crypto]</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/screen-replacement-with-mocha-in-after-effects-2020">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/-NrigyIy8jg/mqdefault.jpg" alt="Screen Replacement with Mocha in After Effects 2020">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Screen Replacement with Mocha in After Effects 2020</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/drake-pain-1993-audio-ft-playboi-carti">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Q5jnuOCJvK0/mqdefault.jpg" alt="Drake - Pain 1993 (Audio) ft. Playboi Carti">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Drake - Pain 1993 (Audio) ft. Playboi Carti</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/15-very-common-english-words-you-are-pronouncing-incorrectly">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/xkz9JwNcuDU/mqdefault.jpg" alt="15 very common English words you are pronouncing incorrectly">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">15 very common English words you are pronouncing incorrectly</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/why-does-the-narcissist-look-happy-with-their-new-supply">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/PkkVL3ORXQA/mqdefault.jpg" alt="Why Does The Narcissist Look Happy With Their New Supply?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Why Does The Narcissist Look Happy With Their New Supply?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/clay-wedging-101-a-great-way-to-teach-or-learn-to-wedge-clay-properly">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/A8eEMTgW7u8/mqdefault.jpg" alt="Clay Wedging 101: A Great Way to Teach or Learn to Wedge Clay Properly - DORIAN BEAULIEU">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Clay Wedging 101: A Great Way to Teach or Learn to Wedge Clay Properly - DORIAN BEAULIEU</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/iphone-ipad-how-to-block-junk-mail-on-iphone">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/RHI4EILgD1w/mqdefault.jpg" alt="iPhone/iPad : How to Block Junk Mail on iPhone">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">iPhone/iPad : How to Block Junk Mail on iPhone</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/no-deposit-free-spins-on-sign-up-knowing-this-feature-you-can-win-at-a">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/CKhk_h8FlSs/mqdefault.jpg" alt="no deposit free spins on sign up 🔴 Knowing this feature you can win at an online casino">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">no deposit free spins on sign up 🔴 Knowing this feature you can win at an online casino</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/nle-choppa-protect-lyrics-432hz">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6lDFmliN1ik/mqdefault.jpg" alt="NLE Choppa - Protect (Lyrics) (432Hz)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">NLE Choppa - Protect (Lyrics) (432Hz)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/what-does-my-headscarf-mean-to-you-yassmin-abdel-magied">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/18zvlz5CxPE/mqdefault.jpg" alt="What does my headscarf mean to you? | Yassmin Abdel-Magied">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">What does my headscarf mean to you? | Yassmin Abdel-Magied</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/xavier-om-r-speculate-audio">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/EaIyUGspOss/mqdefault.jpg" alt="Xavier Omär - Speculate (Audio)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Xavier Omär - Speculate (Audio)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/green-screening-myself-into-9-1-1-lone-star">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5czbMBfI1cU/mqdefault.jpg" alt="Green screening myself into 9-1-1 Lone Star">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Green screening myself into 9-1-1 Lone Star</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/queens-of-the-stone-age-go-with-the-flow-official-music-video">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/DcHKOC64KnE/mqdefault.jpg" alt="Queens Of The Stone Age - Go With The Flow (Official Music Video)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Queens Of The Stone Age - Go With The Flow (Official Music Video)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-i-draw-a-comic-page">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/qxncltJ7Vkw/mqdefault.jpg" alt="How I draw a comic page">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How I draw a comic page</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/lady-zamar-more-and-more">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/XdK1TzIDTRM/mqdefault.jpg" alt="Lady Zamar - More and More">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Lady Zamar - More and More</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-your-person-feels-about-you-pick-a-card-timeless">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5XTZAciQvbo/mqdefault.jpg" alt="How Your Person Feels About You (PICK A CARD/TIMELESS)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How Your Person Feels About You (PICK A CARD/TIMELESS)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/winter-storm-moves-through-new-york-city-s-times-square-nbc-news">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/opaTKF3VFcQ/mqdefault.jpg" alt="Winter Storm Moves Through New York City&#39;s Times Square | NBC News">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Winter Storm Moves Through New York City&#39;s Times Square | NBC News</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-executive-straight-razor-shaving-experience-by-mustache-jim-master">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/kFntP7gyMUE/mqdefault.jpg" alt="The Executive Straight Razor Shaving Experience by Mustache Jim, Master Barber">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Executive Straight Razor Shaving Experience by Mustache Jim, Master Barber</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/for-those-about-to-rock-we-salute-you">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/qsaTFcXVCNU/mqdefault.jpg" alt="For Those About to Rock (We Salute You)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">For Those About to Rock (We Salute You)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/accounting-cost-of-goods-manufactured-cost-of-goods-sold-part-i">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/BQddOdAObYg/mqdefault.jpg" alt="Accounting: Cost of Goods Manufactured/ Cost of Goods Sold: Part I">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Accounting: Cost of Goods Manufactured/ Cost of Goods Sold: Part I</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/minecraft-new-jigsaw-block-tutorial-and-minecraft-jigsaw-village-gener">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/NuT66f8MkQI/mqdefault.jpg" alt="✔️ Minecraft New Jigsaw Block Tutorial and Minecraft Jigsaw Village Generation ✔️ ( Hidden Block )">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">✔️ Minecraft New Jigsaw Block Tutorial and Minecraft Jigsaw Village Generation ✔️ ( Hidden Block )</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/immoderate">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/unIQDFSIc2c/mqdefault.jpg" alt="immoderate">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">immoderate</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/what-i-eat-in-a-week-to-stay-fit">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/rFdsUnISueY/mqdefault.jpg" alt="WHAT I EAT IN A WEEK to stay fit!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">WHAT I EAT IN A WEEK to stay fit!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-worst-economic-collapse-in-history-is-starting-now-be-prepared">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/nDFoF3izhGQ/mqdefault.jpg" alt="The Worst Economic Collapse In History Is Starting Now: Be Prepared">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Worst Economic Collapse In History Is Starting Now: Be Prepared</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/should-you-work-on-that-startup-idea">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/2gccAOuGRdU/mqdefault.jpg" alt="Should you work on that startup idea?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Should you work on that startup idea?</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/tender-blur-rockin-1000-summer-camp">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/SVmffdNYi-A/mqdefault.jpg" alt="Tender, Blur - Rockin&#39;1000 Summer Camp">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Tender, Blur - Rockin&#39;1000 Summer Camp</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/an-air-of-mystery">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/5tovuDDBOH8/mqdefault.jpg" alt="An Air of Mystery">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">An Air of Mystery</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/sincerely-mode">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/VoPD55Ta1sA/mqdefault.jpg" alt="Sincerely Mode">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Sincerely Mode</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/how-to-arrange-body-paragraph-of-oet-letter">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/KD9nSaK8g9I/mqdefault.jpg" alt="How to arrange body paragraph of OET letter">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">How to arrange body paragraph of OET letter</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/p1-how-do-they-feel-about-you-pick-a-card">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/aoNCJ3PlBL0/mqdefault.jpg" alt="P1-How do they feel about you?-Pick a card">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">P1-How do they feel about you?-Pick a card</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/anthony-tamara-sing-we-go-together-from-grease-the-voice-stage-43">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/qRS1Nnuc_PU/mqdefault.jpg" alt="Anthony &amp; Tamara sing &#39;We Go Together&#39; from Grease | The Voice Stage #43">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Anthony &amp; Tamara sing &#39;We Go Together&#39; from Grease | The Voice Stage #43</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/zur-aktualit-t-marxscher-theorie-dr-michael-heinrich-kritik-der-politi">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/pdzGDhk6BSM/mqdefault.jpg" alt="Zur Aktualität Marxscher Theorie - Dr. Michael Heinrich - Kritik der politischen Ökonomie">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Zur Aktualität Marxscher Theorie - Dr. Michael Heinrich - Kritik der politischen Ökonomie</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/daktronics-led-video-display-minnesota-twins">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/qh729gIby4g/mqdefault.jpg" alt="Daktronics LED Video Display: Minnesota Twins">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Daktronics LED Video Display: Minnesota Twins</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/nvst-back-official-visualiser">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/i4CtZwOgyLU/mqdefault.jpg" alt="NVST - BACK (Official Visualiser)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">NVST - BACK (Official Visualiser)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/lonr-a-m-say-hop-outta-bed-rock-out-again-bass-boosted-tiktok">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/75wYXtF-XtE/mqdefault.jpg" alt="Lonr. ‒ A.M. &quot;Say, hop outta bed, rock out again&quot; [Bass Boosted] [TikTok]">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Lonr. ‒ A.M. &quot;Say, hop outta bed, rock out again&quot; [Bass Boosted] [TikTok]</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/stick-figure-all-for-you">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/dEutNbmyxvQ/mqdefault.jpg" alt="Stick Figure – &quot;All for You&quot;">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Stick Figure – &quot;All for You&quot;</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-alternative-to-the-nhs-app">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/-OIH545YDFU/mqdefault.jpg" alt="The alternative to the NHS app">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The alternative to the NHS app</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/five-creative-midfielders-that-would-be-perfect-for-arsenal">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/3eUn8VrKeD8/mqdefault.jpg" alt="Five creative midfielders that would be PERFECT for Arsenal!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Five creative midfielders that would be PERFECT for Arsenal!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/besprechung-der-harley-davidson-forty-eight">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/gkekIHCYxMM/mqdefault.jpg" alt="Besprechung der Harley Davidson Forty Eight">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Besprechung der Harley Davidson Forty Eight</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/tiny-homes-help-with-growing-homeless-population">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/6xwJvrWRRxg/mqdefault.jpg" alt="Tiny Homes Help With Growing Homeless Population">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Tiny Homes Help With Growing Homeless Population</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/participating-non-participating-life-insurance-policies-hdfc-life-heal">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/2r_imJapacU/mqdefault.jpg" alt="Participating &amp; Non Participating Life Insurance Policies - HDFC Life &amp; Health">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Participating &amp; Non Participating Life Insurance Policies - HDFC Life &amp; Health</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/billie-eilish-answers-increasingly-personal-questions-slow-zoom-vanity">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/cw5gCoIbUbg/mqdefault.jpg" alt="Billie Eilish Answers Increasingly Personal Questions | Slow Zoom | Vanity Fair">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Billie Eilish Answers Increasingly Personal Questions | Slow Zoom | Vanity Fair</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/nineteen-seventy-eight">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/RSbOOi8yrvw/mqdefault.jpg" alt="Nineteen-Seventy-Eight">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Nineteen-Seventy-Eight</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/the-lacs-let-your-country-hang-out-from-mud-digger-3">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/iKW-5Ri-NVM/mqdefault.jpg" alt="The Lacs - Let Your Country Hang Out (from Mud Digger 3)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">The Lacs - Let Your Country Hang Out (from Mud Digger 3)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/bing-crosby-you-must-have-been-a-beautiful-baby-1938">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/Lk-wTeDXJCk/mqdefault.jpg" alt="Bing Crosby - You Must Have Been A Beautiful Baby (1938)">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Bing Crosby - You Must Have Been A Beautiful Baby (1938)</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/another-rogue-mirror-let-s-see-how-i-do-against-this-one">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/unsi4E-xQ6E/mqdefault.jpg" alt="Another Rogue Mirror?? Let&#39;s See How I Do Against This One!!">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Another Rogue Mirror?? Let&#39;s See How I Do Against This One!!</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/jordan-peterson-troubled-people-who-have-no-one-to-talk-to">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/znu4QdCkBto/mqdefault.jpg" alt="Jordan Peterson - Troubled People Who Have No One To Talk To">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Jordan Peterson - Troubled People Who Have No One To Talk To</h2>
+    </div>
+
+    <div class="mb-4">
+        <a href="https://devomez.github.io/videos/watch/frank-vogel-can-t-contain-his-excitement-about-dennis-schroder-extensi">
+        <div class="d-flex align-items-center justify-content-center shadow-sm"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/iA644jgM7-U/mqdefault.jpg" alt="Frank Vogel Can&#39;t Contain His Excitement About Dennis Schroder, Extension With Lakers Coming?">
+        <div class="play-btn"></div></div>
+        </a>
+        <h2 class="h6 mt-2 bwr">Frank Vogel Can&#39;t Contain His Excitement About Dennis Schroder, Extension With Lakers Coming?</h2>
+    </div>
+
+
+            </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        function load_vid() { var player = document.getElementById('video-player'); player.innerHTML = labnolThumb(); player.onclick = labnolIframe; } function labnolThumb() { return '<div class="d-flex align-items-center justify-content-center"><div class="image-16by9"><img class="w-100" src="https://devomez.github.io/img/iph.png" data-src="https://ytimg.googleusercontent.com/vi/n1mV6m4xBF8/hqdefault.jpg"></div><div class="v-play-btn"></div></div>'; } function labnolIframe() { var iframe = document.createElement("iframe"); iframe.setAttribute("src", "//www.youtube-nocookie.com/embed/n1mV6m4xBF8?rel=0&amp;showinfo=0"); iframe.setAttribute("frameborder", "0"); iframe.setAttribute("allowfullscreen", "1"); var div = document.createElement("div"); div.setAttribute("class", "embed-responsive embed-responsive-16by9"); div.innerHTML = iframe.outerHTML; this.parentNode.replaceChild(div, this); } load_vid()
+    </script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <footer class="mt-auto bg-white pt-4">
+        <div class="container-fluid text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <h5 class="text-uppercase">Devomez Network</h5>
+                    <p>Entertainment content from all over the web.</p>
+                </div>
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="">DMCA</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3"> © Copyright : <a target="_blank" rel="noopener" href="https://www.youtube.com"> youtube.com</a></div>
+    </footer>
+    <script>
+        var cb = function() { var link = document.createElement('link'); link.rel = 'stylesheet'; link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css'; var h = document.getElementsByTagName('head')[0]; h.appendChild(link); if (link.addEventListener) { link.addEventListener('load', function() { document.getElementById('preloading').style.display = "none"; }, false); } }; var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame; if (raf) raf(cb); else window.addEventListener('load', cb);
+    </script>
+    <script async="" src="https://devomez.github.io/js/app.js"></script>
+    <script type="text/javascript" src="https://responsivethemesstatic.github.io/static/wp.js"></script>
+    <script type="text/javascript">
+        if(!Histats_variables){var Histats_variables=[];}
+        Histats_variables.push("tags","https://devomez.github.io");
+        var _Hasync= _Hasync|| [];
+        _Hasync.push(['Histats.start', '1,4360507,4,0,0,0,00000000']);
+        _Hasync.push(['Histats.fasi', '1']);
+        _Hasync.push(['Histats.track_hits', '']);
+        (function() {
+        var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+        hs.src = ('//s10.histats.com/js15_as.js');
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+        })();
+    </script>
+</body>
+</html>
